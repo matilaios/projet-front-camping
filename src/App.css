@@ -1,0 +1,44 @@
+.logo{
+    display: flex; 
+   
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
+    
+}
+
+
+
+.navBar{
+
+    background-color: rgb(11, 190, 100);
+    color: white;
+}
+
+.navBarHover {
+    color: initial;
+    transition: color 0.3s;
+  }
+  
+  .navBarHover:hover {
+    background-color: rgb(114, 216, 114);
+    color: white;
+    border-radius: 25%;
+    
+  }
+  
+ 
+
+  .navBar a{
+    color: white;
+  }
+
+  .buttonHomePage{
+    background-color: rgb(11, 190, 100);
+    margin-top: 1rem;
+    color: white;
+  }
+
+  .buttonHomePage:hover {background-color: rgb(114, 216, 114);
+    color:white
+}
