@@ -18,8 +18,8 @@ function App() {
   
 
   return <>
-<Container d-flex justify-content-center>
-<img className="logo" src="src/Images/logo campinppong.webp" alt="logo camping" />
+<Container  className="logo" >
+<img src="src/Images/logo campinppong.webp" alt="logo camping" />
 </Container>
   <BrowserRouter>
 <Routes>
@@ -36,6 +36,8 @@ function App() {
 </Routes>
 
   </BrowserRouter>
+
+  <footer className='footer'>footer</footer>
   </>
     
 }
