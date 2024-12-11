@@ -1,3 +1,25 @@
+:root {
+  --vertlogo:rgb(11, 190, 100);
+  --verthover:rgb(114, 216, 114);
+
+}
+
+
+body{
+
+  background-image: url("src/Images/imagefond.png");
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-position:center;
+  position:static;
+  height: max-content;
+  min-height: 93.5vh;
+  margin: 0;
+  padding: 0;
+}
+
+
 .logo{
     display: flex; 
    
@@ -112,7 +134,26 @@
   
 
   .buttonEnvoyer{
-    background-color: rgb(11, 190, 100);
+    display: flex;
+    align-items: center;
+    background-color:rgb(114, 216, 114);
     margin-top: 1rem;
     color: white;
   }
+
+  .buttonEnvoyer:hover {background-color: rgb(114, 216, 114);
+    color:white}
+
+
+    .imgCarousel{
+display: flex;
+justify-content: center;
+      width: 50rem ;
+      margin-top: 2rem;
+     
+    }
+
+
+    .carousel-item {
+      transition: transform 0.5s ease-in-out;
+    }

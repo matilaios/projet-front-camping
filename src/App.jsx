@@ -10,6 +10,7 @@ import HebergementPage from './Pages/HebergementPage';
 import TarifPage from './Pages/TarifPage';
 import ResaPage from './Pages/ResaPage';
 import ContactPage from './Pages/ContactPage';
+import NavBar from './Components/NavBar';
 
 
 
@@ -18,8 +19,12 @@ function App() {
   
 
   return <>
+  <body >
+    
+  
 <Container  className="logo" >
 <img src="src/Images/logo campinppong.webp" alt="logo camping" />
+
 </Container>
   <BrowserRouter>
 <Routes>
@@ -37,6 +42,7 @@ function App() {
 
   </BrowserRouter>
 
+  </body>
   <footer className='footer'>footer</footer>
   </>
     
