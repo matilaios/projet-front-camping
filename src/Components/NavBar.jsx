@@ -18,7 +18,8 @@ function NavBar() {
             <Nav.Link className="navBarHover"><Link to={"/TarifPage"}>TarifPage</Link></Nav.Link>
             <Nav.Link className="navBarHover"><Link to={"/ResaPage"}>Réservation</Link></Nav.Link>
             <Nav.Link className="navBarHover"><Link to={"/ContactPage"}>Contact</Link></Nav.Link>
-            <Nav.Link className="navBarHover"><Link to={"/"}>Retour à la page d'accueil</Link></Nav.Link>
+            <Nav.Link className="navBarHover"><Link to={"/"}>Accueil</Link></Nav.Link>
+            
             <Nav.Link className="navBarHover"><Link to={"/LoginPage"}>Se connecter / s'inscrire</Link></Nav.Link>
             <LogoutButton/>
           </Nav>

@@ -1,11 +1,12 @@
 import { useContext, useState } from "react";
-import { Button, Container, Form } from "react-bootstrap";
+import { Button, Container, Form, Navbar } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import AuthContext from "../Context/AuthContext";
 import UserService from "../Services/UserService";
 import AuthService from "../Services/AuthService";
 import LogoutButton from "../Components/LogOutButton";
-import NavBar from "../Components/NavBar";
+import NavBar from '../Components/NavBar';
+import MyFooter from "../Components/Footer";
 
 const LoginPage = () => {
 
@@ -79,7 +80,7 @@ const LoginPage = () => {
     </Container>
     </div>
     
-    
+    <MyFooter/>
     </>;
 }
  
