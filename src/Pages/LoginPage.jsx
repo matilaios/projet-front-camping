@@ -5,6 +5,7 @@ import AuthContext from "../Context/AuthContext";
 import UserService from "../Services/UserService";
 import AuthService from "../Services/AuthService";
 import LogoutButton from "../Components/LogOutButton";
+import NavBar from "../Components/NavBar";
 
 const LoginPage = () => {
 
@@ -41,9 +42,9 @@ const LoginPage = () => {
   }
 
     return <>
+    <NavBar/>
   <div className="headerLoginPage"></div>
   <div className="d-flex flex-column align-item-center">
-    <LogoutButton/>
      <Container>
     <Form onSubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
