@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from '../Components/NavBar';
 import { Button, Container, InputGroup } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
+import MyFooter from '../Components/Footer';
 
 
 
@@ -9,7 +10,7 @@ import Form from 'react-bootstrap/Form';
 const ContactPage = () => {
     return <>
     <NavBar/>
-    <Button className='buttonHomePage'><a href="/" className="buttonHomePage"> Retour à la page d'accueil </a></Button>
+    
 
     <Container className="formulaire">
     <h1 className='h1formulaire'>FORMULAIRE DE CONTACT</h1>
@@ -68,7 +69,7 @@ const ContactPage = () => {
     <label>je ne suis pas un robot</label>
   </div>
 
-  <div>
+  <div className='d-flex justify-content-center'>
   <Button className='buttonEnvoyer' type="submit">Envoyer</Button>
   </div>
         
@@ -86,7 +87,7 @@ const ContactPage = () => {
 
     </Container>
     
-    
+    <MyFooter/>
     
     </>;
 }

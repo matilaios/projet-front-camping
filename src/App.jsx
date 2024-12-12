@@ -11,6 +11,8 @@ import TarifPage from './Pages/TarifPage';
 import ResaPage from './Pages/ResaPage';
 import ContactPage from './Pages/ContactPage';
 import NavBar from './Components/NavBar';
+import ActivitePage from './Pages/ActivitePages';
+import MyFooter from './Components/Footer';
 
 
 
@@ -19,18 +21,21 @@ function App() {
   
 
   return <>
-  <body >
+  
     
   
 <Container  className="logo" >
-<img src="src/Images/logo campinppong.webp" alt="logo camping" />
-
+<img src="src/Images/logocampingpong.webp" alt="logo camping" />
 </Container>
-  <BrowserRouter>
+
+
+<BrowserRouter>
+
 <Routes>
 <Route path='/' element={<HomePage/>} />
 <Route path='/CampingPage' element={<CampingPage/>}/>
 <Route path='/HebergementPage' element={<HebergementPage/>}/>
+<Route path='/ActivitePage' element={<ActivitePage/>}/>
 <Route path='/TarifPage' element={<TarifPage/>}/>
 <Route path='/ResaPage' element={<ResaPage/>}/>
 <Route path='/ContactPage' element={<ContactPage/>}/>
@@ -42,8 +47,8 @@ function App() {
 
   </BrowserRouter>
 
-  </body>
-  <footer className='footer'>footer</footer>
+  
+ 
   </>
     
 }
