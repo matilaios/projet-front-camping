@@ -43,14 +43,9 @@ const LoginPage = () => {
   }
 
     return <>
-
-
+    <NavBar/>
   <div className="headerLoginPage"></div>
   <div className="d-flex flex-column align-item-center">
-    
-  <NavBar/>
-    
-    
      <Container>
     <Form onSubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
