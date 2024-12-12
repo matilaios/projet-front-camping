@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
+import LogoutButton from './LogOutButton';
 
 function NavBar() {
   return <>
@@ -19,6 +20,8 @@ function NavBar() {
             <Nav.Link className="navBarHover"><Link to={"/ContactPage"}>Contact</Link></Nav.Link>
             <Nav.Link className="navBarHover"><Link to={"/"}>Retour à la page d'accueil</Link></Nav.Link>
             
+            <Nav.Link className="navBarHover"><Link to={"/LoginPage"}>Se connecter / s'inscrire</Link></Nav.Link>
+            <LogoutButton/>
           </Nav>
         
       </Navbar>
