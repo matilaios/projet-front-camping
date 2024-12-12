@@ -1,18 +1,19 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from '../Components/NavBar';
 import { Button } from 'react-bootstrap';
+import MyFooter from '../Components/Footer';
 
 
 
 
 const ResaPage = () => {
     return <>
-    <NavBar/>
-    <Button className='buttonHomePage'><a href="/" className="buttonHomePage"> Retour à la page d'accueil </a></Button>
+   <NavBar/>
+   
     <h1>test ResaPage</h1>
   
     
-    
+    <MyFooter/>
     
     </>;
 }
