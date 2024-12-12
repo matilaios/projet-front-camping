@@ -1,16 +1,17 @@
 import Button from 'react-bootstrap/Button';
 import NavBar from '../Components/NavBar';
+import MyFooter from '../Components/Footer';
 
 
 
 
 const TarifPage = () => {
     return <>
-     <NavBar/>
-     <Button className='buttonHomePage'><a href="/" className="buttonHomePage"> Retour à la page d'accueil </a></Button>
+   <NavBar/>
+     
     <h1>test TarifPage</h1>
     
-    
+    <MyFooter/>
     </>
 }
  
