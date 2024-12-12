@@ -157,3 +157,7 @@ justify-content: center;
     .carousel-item {
       transition: transform 0.5s ease-in-out;
     }
+
+    .headerLoginPage{
+      height: 100px;
+    }
