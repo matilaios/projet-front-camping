@@ -13,9 +13,9 @@ const ResaPage = () => {
     <h1>test ResaPage</h1>
   
     
-    <MyFooter/>
+   
     
-    </>;
+    <MyFooter/>  </>;
 }
  
 export default ResaPage;

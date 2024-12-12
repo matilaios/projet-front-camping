@@ -33,7 +33,7 @@ const LogoutButton = () => {
   };
 
   return (
-    <button onClick={handleLogout} style={{ padding: '10px', backgroundColor: 'red', color: 'white' }}>
+    <button onClick={handleLogout} style={{ padding: '10px', backgroundColor: 'lightblue'}}>
       Se déconnecter
     </button>
   );
