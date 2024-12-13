@@ -9,7 +9,7 @@ import MyFooter from '../Components/Footer';
 
 const ContactPage = () => {
     return <>
-    <NavBar/>
+   
     
 
     <Container className="formulaire">
@@ -87,7 +87,7 @@ const ContactPage = () => {
 
     </Container>
     
-    <MyFooter/>
+    
     
     </>;
 }

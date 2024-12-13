@@ -12,13 +12,13 @@ import MyFooter from '../Components/Footer';
 const HomePage = () => {
     return <>
     
-    <NavBar/>
+    
    
   <Container className='d-flex justify-content-center mt-2rem'>
     <MyCarousel></MyCarousel>
     
     </Container>
-    <MyFooter/>
+    
     </>;
 }
  

@@ -7,7 +7,7 @@ import LogoutButton from './LogOutButton';
 function NavBar() {
   return <>
   <Container className="d-flex justify-content-center ">
-  <Navbar className='navBar'>
+  <Navbar expand="lg" style={{width:"100%"}} className='navBar'>
         
           
           <Nav>

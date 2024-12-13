@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { Button, Container, Form, Navbar } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../Context/AuthContext";
 import UserService from "../Services/UserService";
 import AuthService from "../Services/AuthService";
@@ -43,7 +43,7 @@ const LoginPage = () => {
   }
 
     return <>
-    <NavBar/>
+   
   <div className="headerLoginPage"></div>
   <div className="d-flex flex-column align-item-center">
      <Container>
@@ -56,9 +56,7 @@ const LoginPage = () => {
         name={"mail"} 
         onChange={(e) => setMailUser=(e.target.value)} required
         />
-        <Form.Text className="text-muted">
-          Partage pas ton email 
-        </Form.Text>
+       
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -70,17 +68,21 @@ const LoginPage = () => {
         onChange={(e) => setPasswordUser=(e.target.value)} required
         />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
-      </Form.Group>
-      <Button variant="success" type="submit">
+     
+      <Button variant="success" type="submit" className="d-flex justify-content-center">
         Submit
       </Button>
     </Form>
     </Container>
     </div>
+<Container className="d-flex flex-direction justify-content-center align-items-center">
+    <div className="lienInscription">
+
+<p className="pLogin"> si vous n'êtes pas inscrits, merci de cliquer :</p>
+<Link to={"/SignInPage"}><button className="buttonInscription">Inscription</button></Link>
+    </div>
+    </Container>
     
-    <MyFooter/>
     </>;
 }
  

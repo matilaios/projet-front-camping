@@ -28,14 +28,14 @@ const HebergementPage = () => {
     }, []);
 
     return <>
-    <NavBar/>
+    
         <h1>HebergementPage</h1>
         <div className='d-flex justify-content-center gap-3'>
         <HebergementCard HebergementCard={hebergement} key={hebergement.id}/>
         <HebergementCard/>
         <HebergementCard/>
         </div>
-    <MyFooter/>
+    
     </>;
 }
  
