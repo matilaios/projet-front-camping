@@ -26,7 +26,7 @@ const HebergementPage = () => {
     }, []); 
 
     return <>
-    <NavBar/>
+    
         <h1>HebergementPage</h1>
         <div className='d-flex justify-content-center gap-3'>
         <div>
@@ -40,7 +40,7 @@ const HebergementPage = () => {
                     ))}
                 </div>
         </div>
-    <MyFooter/>
+    
     </>;
 }
  

@@ -106,7 +106,8 @@ body{
     text-align: center; 
     padding: 5px;
     width: 20rem;
-    border: 1px solid #ccc;}
+    border: 1px solid #ccc;
+  border-radius: 30%;}
 
 
     .form-label-message{
@@ -124,7 +125,7 @@ body{
 
   background-color: rgb(11, 190, 100, 0.8);
   width: 40rem;
-  height: 31rem;
+  height: 28rem;
   margin-bottom: 5rem;
   border-radius: 5rem;
    }
@@ -136,21 +137,22 @@ body{
     
   }
 
+  .formulaireInscription{
 
-  .form-groupcheckbox{
-    text-align: center; 
-    
-    width: 5rem;
-    border: 1px solid #ccc;
-  
-  }
+    background-color: rgb(11, 190, 100, 0.8);
+    width: 40rem;
+    height: 36rem;
+    margin-bottom: 10rem;
+    border-radius: 5rem;
+     }
+
   
 
   .buttonEnvoyer{
     display: flex;
     align-items: center;
     background-color:rgb(114, 216, 114);
-    margin-top: 1rem;
+    margin-top: 2rem;
     
   }
 
@@ -182,12 +184,29 @@ justify-content: center;
 
     .logoReseaux{
 width: 1.5rem;
+
     }
 
-    .hebergementCard{
-      border : 1px solid white;
-      margin-bottom: 2vh;
-      padding: 2vh;
-      color: white;
-      background-color: rgb(11, 190, 100);
+    .lienInscription{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--vertlogo);
+      width: 30rem;
+      border-radius: 30%;
     }
+
+
+    
+  .buttonInscription{
+
+    display: flex;
+    margin-bottom: 0.85rem;
+    background-color: transparent;
+    border: none;
+  }
+
+  .pLogin{
+    color: black;
+  }
