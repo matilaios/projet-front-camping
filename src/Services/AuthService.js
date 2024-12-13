@@ -1,5 +1,5 @@
 import axios from "axios";
-import { jwtDecode } from "jwt-decode";
+import {jwtDecode} from "jwt-decode";
 
 function setAxiosToken() {
   const token = localStorage.getItem("token");
@@ -19,7 +19,7 @@ function getUser() {
   const token = localStorage.getItem("token");
   if (token && isValid()) {
     const decodedToken = jwtDecode(token);
-    return { email: decodedToken.email };
+    return { mail: decodedToken.mail };
   } else {
     return {};
   }
