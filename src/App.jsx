@@ -26,7 +26,7 @@ function App() {
 </Container>
 
 
-<BrowserRouter>
+  <BrowserRouter>
 
 <Routes>
 <Route path='/' element={<HomePage/>} />

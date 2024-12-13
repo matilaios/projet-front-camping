@@ -6,34 +6,39 @@ import HebergementService from '../Services/HebergementService';
 import { useEffect, useState } from 'react';
 
 const HebergementPage = () => {
+    const [data, setData] = useState([]); // État pour stocker les données
+    const [error, setError] = useState(null); // État pour gérer les erreurs
 
-    const [hebergement, setHebergement] = useState([]);
 
-    const fetchHebergements = async () => {
+    const fetchData = async () => {
         try {
             const response = await HebergementService.getAllHebergements();
-
-            console.log(response);
-            // const res = response.data.results;
-
-            // setHebergement(res);
-
-        } catch (error) {
-            console.error(error);
+            console.log('Données reçues:', response.data);
+            setData(response.data); // Mise à jour de l'état avec les données récupérées
+        } catch (err) {
+            console.error('Erreur lors de la récupération des données:', err);
+            setError('Une erreur est survenue lors de la récupération des données.');
         }
     };
 
     useEffect(() => {
-        fetchHebergements;
-    }, []);
+        fetchData(); 
+    }, []); 
 
     return <>
     <NavBar/>
         <h1>HebergementPage</h1>
         <div className='d-flex justify-content-center gap-3'>
-        <HebergementCard HebergementCard={hebergement} key={hebergement.id}/>
-        <HebergementCard/>
-        <HebergementCard/>
+        <div>
+                    {data.map((item) => (
+                        <div key={item.idHebergement} className='hebergementCard'>
+                            <h2>{item.nom}</h2>
+                            <p><strong>Numéro :</strong> {item.numero}</p>
+                            <p><strong>Description :</strong> {item.description}</p>
+                            <p><strong>Type :</strong> {item.type}</p>
+                        </div>
+                    ))}
+                </div>
         </div>
     <MyFooter/>
     </>;
