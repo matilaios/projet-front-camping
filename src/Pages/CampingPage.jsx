@@ -8,11 +8,11 @@ import MyFooter from '../Components/Footer';
 
 const CampingPage = () => {
     return <>
-    <NavBar/>
+    
     
     <h1>test campingPage</h1>
     
-    <MyFooter/>
+   
     </>;
 }
  

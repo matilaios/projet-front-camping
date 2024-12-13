@@ -5,10 +5,11 @@ import { Link } from "react-router-dom";
 // import LogoutButton from "./LogoutButton.jsx";
 
 function NavBar() {
-  return (
-    <>
-      <Container className="d-flex justify-content-center ">
-        <Navbar className="navBar">
+  return <>
+  <Container className="d-flex justify-content-center ">
+  <Navbar expand="lg" style={{width:"100%"}} className='navBar'>
+        
+          
           <Nav>
             <Nav.Link className="navBarHover">
               <Link to={"/CampingPage"}>CampingPage</Link>

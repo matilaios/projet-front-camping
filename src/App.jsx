@@ -14,6 +14,7 @@ import NavBar from './Components/NavBar';
 import ActivitePage from './Pages/ActivitePages';
 import MyFooter from './Components/Footer';
 import LoginPage from './Pages/LoginPage';
+import SignInPage from './Pages/SignInPage';
 
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
 
 
 <BrowserRouter>
-
+<NavBar/>
 <Routes>
 <Route path='/' element={<HomePage/>} />
 <Route path='/CampingPage' element={<CampingPage/>}/>
@@ -37,7 +38,9 @@ function App() {
 <Route path='/ResaPage' element={<ResaPage/>}/>
 <Route path='/ContactPage' element={<ContactPage/>}/>
 <Route path='/LoginPage' element={<LoginPage/>}/>
+<Route path='/SignInPage' element={<SignInPage/>}/>
     </Routes>
+<MyFooter/>
   </BrowserRouter>
 
   

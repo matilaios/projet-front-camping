@@ -8,14 +8,15 @@ import MyFooter from '../Components/Footer';
 
 const ResaPage = () => {
     return <>
-   <NavBar/>
+   
    
     <h1>test ResaPage</h1>
   
     
    
     
-    <MyFooter/>  </>;
+    
+      </>;
 }
  
 export default ResaPage;

@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { Button, Container, Form, Navbar } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../Context/AuthContext";
 import UserService from "../Services/UserService";
 import AuthService from "../Services/AuthService";
@@ -65,29 +65,27 @@ const LoginPage = () => {
               </Form.Text>
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control
-                type="password"
-                placeholder="Password"
-                name="password"
-                required
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-              <Form.Check type="checkbox" label="Check me out" />
-            </Form.Group>
-            <Button variant="success" type="submit">
-              Submit
-            </Button>
-          </Form>
-        </Container>
-      </div>
-
-      <MyFooter />
-    </>
-  );
-};
-
+      <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Label>Password</Form.Label>
+        <Form.Control 
+        type="password" 
+        placeholder="Password" 
+        name={"password"} 
+        onChange={(e) => setPasswordUser=(e.target.value)} required
+        />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicCheckbox">
+        <Form.Check type="checkbox" label="Check me out" />
+      </Form.Group>
+      <Button variant="success" type="submit">
+        Submit
+      </Button>
+    </Form>
+    </Container>
+    </div>
+    
+    <MyFooter/>
+    </>;
+}
+ 
 export default LoginPage;
