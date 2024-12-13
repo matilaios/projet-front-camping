@@ -1,5 +1,7 @@
+import axios from "axios";
+
 function getAllHebergements() {
-    return axios.get(`http://localhost:3000/readHebergement`);
+    return axios.get(`http://localhost:3000/campingpong/readHebergement`);
   }
 
 function getHebergementDetails(id){
