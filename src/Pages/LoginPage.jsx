@@ -44,7 +44,7 @@ const LoginPage = () => {
     }
   };
 
-  return (
+  return 
     <>
       <NavBar />
       <div className="headerLoginPage"></div>

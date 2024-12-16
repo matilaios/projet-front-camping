@@ -33,10 +33,10 @@ function NavBar() {
               <Link to={"/"}>Accueil</Link>
             </Nav.Link>
 
-            <Nav.Link className="navBarHover">
+            {/* <Nav.Link className="navBarHover">
             {isAuthentificated ? logout() : login}
                           <Link to={"/LoginPage"}>Se connecter / s'inscrire</Link>
-            </Nav.Link>
+            </Nav.Link> */}
 
            
 
@@ -48,7 +48,7 @@ function NavBar() {
         </Navbar>
       </Container>
     </>
-  );
+
 }
 
 export default NavBar;

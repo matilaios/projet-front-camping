@@ -32,10 +32,7 @@ const HebergementPage = () => {
         <div>
                     {data.map((item) => (
                         <div key={item.idHebergement} className='hebergementCard'>
-                            <h2>{item.nom}</h2>
-                            <p><strong>Numéro :</strong> {item.numero}</p>
-                            <p><strong>Description :</strong> {item.description}</p>
-                            <p><strong>Type :</strong> {item.type}</p>
+                            <h2>{item.hebergement_nom}</h2>
                         </div>
                     ))}
                 </div>
