@@ -46,7 +46,9 @@ const LoginPage = () => {
     }
   };
 
-  return <>
+  return 
+
+   <>
       <div className="headerLoginPage"></div>
       <div className="d-flex flex-column align-item-center">
         <Container>
@@ -91,6 +93,6 @@ const LoginPage = () => {
     </Container>
     
     </>
-)}
+}
  
 export default LoginPage;
