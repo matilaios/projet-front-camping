@@ -10,7 +10,7 @@ const CampingPage = () => {
     return <>
     
     
-    <h1>test campingPage</h1>
+    
     
    
     </>;

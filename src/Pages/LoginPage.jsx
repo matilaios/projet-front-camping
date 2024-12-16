@@ -4,8 +4,9 @@ import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../Context/AuthContext";
 import UserService from "../Services/UserService";
 import AuthService from "../Services/AuthService";
+
 // import LogoutButton from "../Components/LogoutButton.jsx";
-import NavBar from "../Components/NavBar";
+
 import MyFooter from "../Components/Footer";
 
 const LoginPage = () => {
@@ -36,6 +37,7 @@ const LoginPage = () => {
       setIsAuthenticated(true);
       localStorage.setItem("token", response.data.token);
       alert("connexion réussie");
+    
       navigate("/");
     } catch (error) {
       console.log(error);
@@ -50,7 +52,7 @@ const LoginPage = () => {
         <Container>
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
+              < Form.Label>Email address</Form.Label>
               <Form.Control
                 type="email"
                 placeholder="Enter email"
@@ -81,9 +83,14 @@ const LoginPage = () => {
     </Form>
     </Container>
     </div>
+    <Container className="d-flex flex-direction justify-content-center align-items-center">
+    <div className="lienInscription">
+<p className="pLogin"> si vous n'êtes pas inscrits, merci de cliquer :</p>
+<Link to={"/SignInPage"}><button className="buttonInscription">Inscription</button></Link>
+    </div>
+    </Container>
     
-    <MyFooter/>
-    </>;
-}
+    </>
+)}
  
 export default LoginPage;
