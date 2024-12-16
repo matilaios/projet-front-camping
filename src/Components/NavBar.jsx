@@ -1,10 +1,15 @@
+import { Button } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import AuthService from "../Services/AuthService";
 // import LogoutButton from "./LogoutButton.jsx";
 
 function NavBar() {
+  const isUserValid = AuthService.isValid();
+  const navigate = useNavigate();
+
   return <>
   <Container className="d-flex justify-content-center ">
   <Navbar expand="lg" style={{width:"100%"}} className='navBar'>
@@ -32,23 +37,20 @@ function NavBar() {
             <Nav.Link className="navBarHover">
               <Link to={"/"}>Accueil</Link>
             </Nav.Link>
+     
+{/* bouton de la navbar qui change selon qu'on est connecté ou pas */}
+{/* ok le 13/12/24 */}
+  <Nav.Link className="navBarHover">
+    {isUserValid ? (<Button variant="danger" onClick={()=>{AuthService.logout(); navigate('/')}}>Se déconnecter</Button>) 
+    : (
+      <Link to={"/LoginPage"}>Se connecter / s'inscrire</Link>
+    )}
+  </Nav.Link>
 
-            <Nav.Link className="navBarHover">
-            {isAuthentificated ? logout() : login}
-                          <Link to={"/LoginPage"}>Se connecter / s'inscrire</Link>
-            </Nav.Link>
-
-           
-
-
-
-
-            {/* <LogoutButton /> */}
           </Nav>
         </Navbar>
       </Container>
     </>
-  );
 }
 
 export default NavBar;

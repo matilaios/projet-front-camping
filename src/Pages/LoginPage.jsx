@@ -44,9 +44,7 @@ const LoginPage = () => {
     }
   };
 
-  return (
-    <>
-      <NavBar />
+  return <>
       <div className="headerLoginPage"></div>
       <div className="d-flex flex-column align-item-center">
         <Container>
@@ -68,11 +66,11 @@ const LoginPage = () => {
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Password</Form.Label>
         <Form.Control 
-        type="password" 
-        placeholder="Password" 
-        name={"password"} 
-        onChange={(e) => setPasswordUser=(e.target.value)} required
-        />
+ type="password"
+ placeholder="Password"
+ name="password"
+ required
+ onChange={(e) => setPassword(e.target.value)}        />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicCheckbox">
         <Form.Check type="checkbox" label="Check me out" />
