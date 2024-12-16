@@ -34,7 +34,7 @@ function NavBar() {
             </Nav.Link>
 
             <Nav.Link className="navBarHover">
-            {isAuthentificated ? logout() : login}
+            {/* {isAuthentificated ? logout() : login} */}
                           <Link to={"/LoginPage"}>Se connecter / s'inscrire</Link>
             </Nav.Link>
 
@@ -48,7 +48,7 @@ function NavBar() {
         </Navbar>
       </Container>
     </>
-  );
+  
 }
 
 export default NavBar;
