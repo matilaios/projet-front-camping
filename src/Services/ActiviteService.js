@@ -1,7 +1,15 @@
 import axios from "axios";
 
 function getAllActivites(){
-    return axios.get(`http://localhost:3000/campingpong/readActivite`);
+    return axios.get(`http://localhost:3000/campingpong/readActivites`);
 }
 
-export default {getAllActivites};
+function getAllTypeActivites(){
+    return axios.get("http://127.0.0.1:3000/campingpong/readTypeActivites");
+}
+
+function getAllActivitesByIdType(idType)
+{
+    return axios.get("http://127.0.0.1:3000/campingpong/readActiviteByIdType/"+ idType);
+}
+export default {getAllActivites, getAllTypeActivites, getAllActivitesByIdType};
