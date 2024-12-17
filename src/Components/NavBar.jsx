@@ -11,11 +11,12 @@ function NavBar() {
   const navigate = useNavigate();
 
   return <>
-  <Container className="d-flex justify-content-center ">
+  <div className="d-flex justify-content-center w-100">
+  
   <Navbar expand="lg" style={{width:"100%"}} className='navBar'>
         
           
-          <Nav>
+          <Nav >
             <Nav.Link className="navBarHover">
               <Link to={"/CampingPage"}>CampingPage</Link>
             </Nav.Link>
@@ -49,7 +50,7 @@ function NavBar() {
 
           </Nav>
         </Navbar>
-      </Container>
+      </div>
     </>
 }
 

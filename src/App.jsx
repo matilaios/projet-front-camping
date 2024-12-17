@@ -15,20 +15,23 @@ import ActivitePage from './Pages/ActivitePages';
 import MyFooter from './Components/Footer';
 import LoginPage from './Pages/LoginPage';
 import SignInPage from './Pages/SignInPage';
+import HebergementDetailPage from './Pages/DetailHebergementPage';
 
 
 function App() {
   
   return <>
   
-    
+  <BrowserRouter> 
 <Container  className="logo" >
 <img src="src/Images/logocampingpong.webp" alt="logo camping" />
 </Container>
 
 
-<BrowserRouter>
-<NavBar/>
+
+  <div>
+    <NavBar/>
+  </div>
 <Routes>
 <Route path='/' element={<HomePage/>} />
 <Route path='/CampingPage' element={<CampingPage/>}/>
@@ -39,6 +42,7 @@ function App() {
 <Route path='/ContactPage' element={<ContactPage/>}/>
 <Route path='/LoginPage' element={<LoginPage/>}/>
 <Route path='/SignInPage' element={<SignInPage/>}/>
+<Route path='/DetailPage' element={<HebergementDetailPage/>}/>
     </Routes>
 <MyFooter/>
   </BrowserRouter>
