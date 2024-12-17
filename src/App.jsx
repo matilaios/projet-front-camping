@@ -25,7 +25,7 @@ function App() {
 
   return <>
   
-  <BrowserRouter> 
+
 <Container  className="logo" >
 <img src="src/Images/logocampingpong.webp" alt="logo camping" />
 </Container>
