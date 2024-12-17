@@ -11,10 +11,11 @@ import { useNavigate } from 'react-router-dom';
 
 
 
+
 const SignInPage = () => {
 
     const [user, setUser]=useState({});
-    const navigate=useNavigate();
+    const navigate = useNavigate();
     const handleChange=(e)=>{
       console.log(e.target.value);
       console.log(e.target.name);
@@ -31,7 +32,7 @@ const SignInPage = () => {
       const response  = await UserService.createUser(user);
       setUser(response);
       alert("inscription réussie")
-      navigate('/loginPage')
+      navigate('/HomePage')
 
     } catch (error) {
       console.log(error)

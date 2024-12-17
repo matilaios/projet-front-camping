@@ -1,11 +1,10 @@
-
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Link, Navigate, Route, Routes } from 'react-router-dom';
 import HomePage from './Pages/HomePage';
 import CampingPage from './Pages/CampingPage';
-import { Container } from 'react-bootstrap';
+import { Button, Container, Nav } from 'react-bootstrap';
 import HebergementPage from './Pages/HebergementPage';
 import TarifPage from './Pages/TarifPage';
 import ResaPage from './Pages/ResaPage';
@@ -15,10 +14,14 @@ import ActivitePage from './Pages/ActivitePages';
 import MyFooter from './Components/Footer';
 import LoginPage from './Pages/LoginPage';
 import SignInPage from './Pages/SignInPage';
-
+import { useNavigate } from 'react-router-dom';
+import AuthService from './Services/AuthService';
 
 function App() {
   
+
+  
+
   return <>
   
     
@@ -28,9 +31,10 @@ function App() {
 
 
 <BrowserRouter>
+
 <NavBar/>
 <Routes>
-<Route path='/' element={<HomePage/>} />
+<Route path='/HomePage' element={<HomePage/>} />
 <Route path='/CampingPage' element={<CampingPage/>}/>
 <Route path='/HebergementPage' element={<HebergementPage/>}/>
 <Route path='/ActivitePage' element={<ActivitePage/>}/>
@@ -40,7 +44,10 @@ function App() {
 <Route path='/LoginPage' element={<LoginPage/>}/>
 <Route path='/SignInPage' element={<SignInPage/>}/>
     </Routes>
+
+    
 <MyFooter/>
+
   </BrowserRouter>
 
   

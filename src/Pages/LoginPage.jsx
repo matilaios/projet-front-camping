@@ -38,7 +38,7 @@ const LoginPage = () => {
       localStorage.setItem("token", response.data.token);
       alert("connexion réussie");
     
-      navigate("/");
+      navigate("/HomePage");
     } catch (error) {
       console.log(error);
       alert("erreur lors de la connexion");
