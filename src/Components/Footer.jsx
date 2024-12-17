@@ -5,7 +5,7 @@ import { Container } from 'react-bootstrap';
 const MyFooter = () => {
   return <>
 
-  <Container  className="d-flex justify-content-center ">
+  <div  className="d-flex justify-content-center">
     <footer className="footer">
       <div className="d-flex items-center">
         <span className="me-1">mentions-legales</span>
@@ -18,7 +18,7 @@ const MyFooter = () => {
       </div>
       
     </footer>
-    </Container>
+    </div>
     </>
 };
 

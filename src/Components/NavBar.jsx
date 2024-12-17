@@ -11,7 +11,7 @@ function NavBar() {
   const navigate = useNavigate();
 
   return <>
-  <Container className="d-flex justify-content-center ">
+  <div className="d-flex justify-content-center w-100">
   <Navbar expand="lg" style={{width:"100%"}} className='navBar'>
         
           
@@ -35,21 +35,21 @@ function NavBar() {
               <Link to={"/ContactPage"}>Contact</Link>
             </Nav.Link>
             <Nav.Link className="navBarHover">
-              <Link to={"/"}>Accueil</Link>
+              <Link to={"/HomePage"}>Accueil</Link>
             </Nav.Link>
      
 {/* bouton de la navbar qui change selon qu'on est connecté ou pas */}
 {/* ok le 13/12/24 */}
   <Nav.Link className="navBarHover">
-    {isUserValid ? (<Button variant="danger" onClick={()=>{AuthService.logout(); navigate('/')}}>Se déconnecter</Button>) 
+    {isUserValid ? (<Button variant="danger" onClick={()=>{AuthService.logout(); navigate('/HomePage')}}>Se déconnecter</Button>) 
     : (
       <Link to={"/LoginPage"}>Se connecter / s'inscrire</Link>
     )}
   </Nav.Link>
 
           </Nav>
-        </Navbar>
-      </Container>
+      </Navbar>
+        </div>
     </>
 }
 
