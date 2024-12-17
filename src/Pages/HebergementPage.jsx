@@ -1,9 +1,8 @@
-import Button from 'react-bootstrap/Button';
-import NavBar from '../Components/NavBar';
-import MyFooter from '../Components/Footer';
-import HebergementCard from '../Components/HebergementCard';
-import HebergementService from '../Services/HebergementService';
+
 import { useEffect, useState } from 'react';
+import TypeHebergementService from '../Services/TypeHebergementService';
+import HebergementCard from '../Components/HebergementCard';
+import { Container } from 'react-bootstrap';
 
 const HebergementPage = () => {
     const [data, setData] = useState([]); // État pour stocker les données
@@ -12,7 +11,7 @@ const HebergementPage = () => {
 
     const fetchData = async () => {
         try {
-            const response = await HebergementService.getAllHebergements();
+            const response = await TypeHebergementService.getAllTypesHebergements();
             console.log('Données reçues:', response.data);
             setData(response.data); // Mise à jour de l'état avec les données récupérées
         } catch (err) {
@@ -27,17 +26,12 @@ const HebergementPage = () => {
 
     return <>
     
-        <h1>HebergementPage</h1>
-        <div className='d-flex justify-content-center gap-3'>
-        <div>
-                    {data.map((item) => (
-                        <div key={item.idHebergement} className='hebergementCard'>
-                            <h2>{item.hebergement_nom}</h2>
-                        </div>
-                    ))}
-                </div>
+        <h1 className='d-flex justify-content-center text-white'>Liste des hébergements</h1>
+        <div className='multicard'>
+        {data.map((item) => (
+        <HebergementCard HebergementCard={item} key={item.id}/>
+    ))}
         </div>
-    
     </>;
 }
  

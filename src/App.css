@@ -69,9 +69,13 @@ body {
   justify-content: center;
   position: sticky;
   margin-top: 1rem;
-  padding:0;
-
-  color: black;
+  padding-inline: 2px;
+  color:black;
+  position: fixed;
+  bottom:0;
+  width: 100%;
+ 
+  
 }
 
 .form-group {
@@ -174,8 +178,28 @@ body {
 }
 
 .pLogin {
-  color: black;
-}
+  color: black;}
+
+
+
+
+  .card{
+    color:maroon;
+    background-color:darkkhaki;
+  }
+
+  .list-group-flush{
+    color:maroon;
+    background-color:darkkhaki;
+  }
+
+  .multicard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
 
 .calendar {
   margin-left: 10rem;
