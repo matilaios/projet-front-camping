@@ -14,6 +14,7 @@ import ActivitePage from './Pages/ActivitePages';
 import MyFooter from './Components/Footer';
 import LoginPage from './Pages/LoginPage';
 import SignInPage from './Pages/SignInPage';
+import HebergementDetailPage from './Pages/DetailHebergementPage';
 import { useNavigate } from 'react-router-dom';
 import AuthService from './Services/AuthService';
 
@@ -24,7 +25,7 @@ function App() {
 
   return <>
   
-    
+
 <Container  className="logo" >
 <img src="src/Images/logocampingpong.webp" alt="logo camping" />
 </Container>
@@ -43,6 +44,7 @@ function App() {
 <Route path='/ContactPage' element={<ContactPage/>}/>
 <Route path='/LoginPage' element={<LoginPage/>}/>
 <Route path='/SignInPage' element={<SignInPage/>}/>
+<Route path='/DetailPage' element={<HebergementDetailPage/>}/>
     </Routes>
 
     

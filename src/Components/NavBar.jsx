@@ -15,7 +15,7 @@ function NavBar() {
   <Navbar expand="lg" style={{width:"100%"}} className='navBar'>
         
           
-          <Nav>
+          <Nav >
             <Nav.Link className="navBarHover">
               <Link to={"/CampingPage"}>CampingPage</Link>
             </Nav.Link>
