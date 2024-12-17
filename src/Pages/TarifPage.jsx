@@ -7,11 +7,11 @@ import MyFooter from '../Components/Footer';
 
 const TarifPage = () => {
     return <>
-   <NavBar/>
+   
      
     <h1>test TarifPage</h1>
     
-    <MyFooter/>
+   
     </>
 }
  

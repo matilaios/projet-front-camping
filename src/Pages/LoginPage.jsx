@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
 import { Button, Container, Form, Navbar } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../Context/AuthContext";
 import UserService from "../Services/UserService";
 import AuthService from "../Services/AuthService";
+import { Link, useNavigate } from "react-router-dom";
 
 // import LogoutButton from "../Components/LogoutButton.jsx";
 
@@ -38,7 +38,7 @@ const LoginPage = () => {
       localStorage.setItem("token", response.data.token);
       alert("connexion réussie");
     
-      navigate("/");
+      navigate("/HomePage");
     } catch (error) {
       console.log(error);
       alert("erreur lors de la connexion");
@@ -46,9 +46,7 @@ const LoginPage = () => {
     }
   };
 
-  return 
-
-   <>
+  return <>
       <div className="headerLoginPage"></div>
       <div className="d-flex flex-column align-item-center">
         <Container>
