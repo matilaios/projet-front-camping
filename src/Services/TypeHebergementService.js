@@ -4,8 +4,8 @@ function getAllTypesHebergements() {
     return axios.get(`http://localhost:3000/campingpong/readTypeHebergement`);
   }
 
-function getTypeHebergementById(id){
-    return axios.get('http://localhost:3000/campingpong/readHebergementById/' + id);
+function getTypeHebergementById(idTYPE){
+    return axios.get('http://localhost:3000/campingpong/readTypeHebergementById/' + idTYPE);
   }
 
   export default { getAllTypesHebergements, getTypeHebergementById };

@@ -32,7 +32,7 @@ const SignInPage = () => {
       const response  = await UserService.createUser(user);
       setUser(response);
       alert("inscription réussie")
-      navigate('/HomePage')
+      navigate('/loginPage')
 
     } catch (error) {
       console.log(error)
@@ -53,19 +53,22 @@ const SignInPage = () => {
     
         
     <form onSubmit={handleSubmit}> 
-    <InputGroup className="mb-3  gap-2" >
-        <InputGroup.Text id="basic-addon1">Nom</InputGroup.Text>
+    
+    <InputGroup className="InputGroupInscription"  >
+        <InputGroup.Text id="InputFormInscription">Nom</InputGroup.Text>
         <Form.Control
           placeholder="ex : DUPONT"
           aria-label="nom"
           aria-describedby="basic-addon1"
           onChange={handleChange}
           name="nom"
+          required
+          
         />
 
         
  </InputGroup>
- <InputGroup className="mb-3  gap-2" >
+ <InputGroup className="InputGroupInscription" >
  <InputGroup.Text id="basic-addon1">Prénom</InputGroup.Text>
         <Form.Control
           placeholder="ex : Philippe"
@@ -73,31 +76,36 @@ const SignInPage = () => {
           aria-describedby="basic-addon1"
           onChange={handleChange}
           name="prenom"
+          required
         />
  </InputGroup>
 
- <InputGroup className="mb-3  gap-2" >
+ <InputGroup className="InputGroupInscription" >
  <InputGroup.Text id="basic-addon1">Date de Naissance</InputGroup.Text>
         <Form.Control
           type="date"
           
           aria-label="dateNaissance"
           aria-describedby="basic-addon1"
+          
           onChange={handleChange}
           name="dateNaissance"
+          required
         />
  </InputGroup>
- <InputGroup className="mb-3  gap-2" >
+ <InputGroup className="InputGroupInscription" >
  <InputGroup.Text id="basic-addon1">telephone</InputGroup.Text>
         <Form.Control
           type="tel"
           aria-label="telephone"
           aria-describedby="basic-addon1"
+          maxLength={10}
           onChange={handleChange}
           name="telephone"
+          required
         />
  </InputGroup>
- <InputGroup className="mb-3  gap-2" >
+ <InputGroup className="InputGroupInscription" >
  <InputGroup.Text id="basic-addon1">adresse</InputGroup.Text>
         <Form.Control
           
@@ -105,16 +113,18 @@ const SignInPage = () => {
           aria-describedby="basic-addon1"
           onChange={handleChange}
           name="adresse"
+          required
         />
  </InputGroup>
- <InputGroup className="mb-3  gap-2" >
+ <InputGroup className="InputGroupInscription" >
  <InputGroup.Text id="basic-addon1">Code Postal</InputGroup.Text>
-        <Form.Control
+        <Form.Control className="InputGroupCP"
           
           aria-label="codePostal"
           aria-describedby="basic-addon1"
           onChange={handleChange}
           name="codePostal"
+          required
         />
 
  <InputGroup.Text id="basic-addon1">Ville</InputGroup.Text>
@@ -124,9 +134,10 @@ const SignInPage = () => {
           aria-describedby="basic-addon1"
           onChange={handleChange}
           name="ville"
+          required
         />
  </InputGroup>
- <InputGroup className="mb-3  gap-2" >
+ <InputGroup className="InputGroupInscription" >
  <InputGroup.Text id="basic-addon1">Pays</InputGroup.Text>
         <Form.Control
           
@@ -134,9 +145,10 @@ const SignInPage = () => {
           aria-describedby="basic-addon1"
           onChange={handleChange}
           name="pays"
+          required
         />
  </InputGroup>
- <InputGroup className="mb-3  gap-2" >
+ <InputGroup className="InputGroupInscription">
  <InputGroup.Text id="basic-addon1">Mail</InputGroup.Text>
         <Form.Control
           
@@ -144,9 +156,10 @@ const SignInPage = () => {
           aria-describedby="basic-addon1"
           onChange={handleChange}
           name="mail"
+          required
         />
  </InputGroup>
- <InputGroup className="mb-3  gap-2" >
+ <InputGroup className="InputGroupInscription">
  <InputGroup.Text id="basic-addon1">Password</InputGroup.Text>
         <Form.Control
           type="password"
@@ -154,14 +167,15 @@ const SignInPage = () => {
           aria-describedby="basic-addon1"
           onChange={handleChange}
           name="password"
+          required
         />
 </InputGroup>
 
 
- <Form.Control 
+ <Form.Control  className="buttonInscription"
   type="submit" 
   value="Inscription" 
-  className="btn btn-primary"
+ 
 />
         </form>
      

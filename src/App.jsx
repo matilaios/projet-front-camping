@@ -19,6 +19,8 @@ import { useNavigate } from "react-router-dom";
 import AuthService from "./Services/AuthService";
 import EditActivitePage from "./Pages/EditActivitePage";
 import logo from "./Images/logocampingpong.webp";
+import DetailHebergementPage from './Pages/DetailHebergementPage';
+
 function App() {
   return (
     <>
@@ -26,24 +28,24 @@ function App() {
         <img src={logo} alt="logo camping" />
       </Container>
 
-      <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path="/HomePage" element={<HomePage />} />
-          <Route path="/CampingPage" element={<CampingPage />} />
-          <Route path="/HebergementPage" element={<HebergementPage />} />
-          <Route path="/ActivitePage" element={<ActivitePage />} />
-          <Route path="/TarifPage" element={<TarifPage />} />
-          <Route path="/ResaPage" element={<ResaPage />} />
-          <Route path="/ContactPage" element={<ContactPage />} />
-          <Route path="/LoginPage" element={<LoginPage />} />
-          <Route path="/SignInPage" element={<SignInPage />} />
-          <Route path="/DetailPage" element={<HebergementDetailPage />} />
-          <Route
-            path="/EditActivitePage/:idActivite"
-            element={<EditActivitePage></EditActivitePage>}
-          ></Route>
-        </Routes>
+<BrowserRouter>
+
+<NavBar/>
+    <Routes>
+<Route path='/HomePage' element={<HomePage/>} />
+<Route path='/CampingPage' element={<CampingPage/>}/>
+<Route path='/HebergementPage' element={<HebergementPage/>}/>
+<Route path='/ActivitePage' element={<ActivitePage/>}/>
+<Route path='/TarifPage' element={<TarifPage/>}/>
+<Route path='/ResaPage' element={<ResaPage/>}/>
+<Route path='/ContactPage' element={<ContactPage/>}/>
+<Route path='/LoginPage' element={<LoginPage/>}/>
+<Route path='/SignInPage' element={<SignInPage/>}/>
+<Route path='/HebergementPage/:idTYPE' element={<DetailHebergementPage/>}/>
+<Route path="/DetailPage" element={<HebergementDetailPage />} />
+
+<Route path='/EditActivitePage/:idActivite' element={<EditPage></EditPage>}></Route>
+  </Routes>
 
         <MyFooter />
       </BrowserRouter>
