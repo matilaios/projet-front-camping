@@ -71,7 +71,7 @@ body {
   margin-top: 1rem;
   padding-inline: 2px;
   color:black;
-  position: fixed;
+  position:sticky;
   bottom:0;
   width: 100%;
  
@@ -287,6 +287,22 @@ margin-left: 2rem;
   margin-left: 2rem;
   width: 20rem;
   background-color: var(--vertlogo);
+}
+
+.cardHebergement{
+  background-color: wheat;  
+  width: 18rem;
+
+}
+
+.cardHebergement img{
+  width: 18rem;
+  height: 12rem;
+}
+
+.textHebergement{
+  width: 18rem;
+  height: 5rem;
 }
 
 .CampingPartieGauche{

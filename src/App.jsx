@@ -15,17 +15,13 @@ import MyFooter from './Components/Footer';
 import LoginPage from './Pages/LoginPage';
 import SignInPage from './Pages/SignInPage';
 import HebergementDetailPage from './Pages/DetailHebergementPage';
-import { useNavigate } from 'react-router-dom';
-import AuthService from './Services/AuthService';
 import EditPage from './Pages/EditActivitePage';
+import DetailHebergementPage from './Pages/DetailHebergementPage';
 
 function App() {
   
-
-
   return <>
   
-
 <Container  className="logo" >
 <img src="src/Images/logocampingpong.webp" alt="logo camping" />
 </Container>
@@ -34,7 +30,7 @@ function App() {
 <BrowserRouter>
 
 <NavBar/>
-<Routes>
+    <Routes>
 <Route path='/HomePage' element={<HomePage/>} />
 <Route path='/CampingPage' element={<CampingPage/>}/>
 <Route path='/HebergementPage' element={<HebergementPage/>}/>
@@ -44,12 +40,9 @@ function App() {
 <Route path='/ContactPage' element={<ContactPage/>}/>
 <Route path='/LoginPage' element={<LoginPage/>}/>
 <Route path='/SignInPage' element={<SignInPage/>}/>
-<Route path='/DetailPage' element={<HebergementDetailPage/>}/>
+<Route path='/HebergementPage/:idTYPE' element={<DetailHebergementPage/>}/>
 <Route path='/EditActivitePage/:idActivite' element={<EditPage></EditPage>}></Route>
-
-
-
-    </Routes>
+  </Routes>
 
     
 <MyFooter/>

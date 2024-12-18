@@ -1,42 +1,42 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom"
 import TypeHebergementService from "../Services/TypeHebergementService";
-import { use } from "react";
-import { useParams } from "react-router-dom";
 
-const HebergementDetailPage = () => {
 
-    const { id } = useParams()
-    const [data, setData] = useState([]); // État pour stocker les données
-    const [error, setError] = useState(null); // État pour gérer les erreurs
 
+const DetailHebergementPage = () => {
+    const { idTYPE } = useParams();
+    const [hebergement, setHebergement] = useState([]);
+    console.log("jsuis la");
+    console.log(idTYPE);
 
     const fetchHebergementById = async () => {
         try {
-            const response = await TypeHebergementService.getTypeHebergementById(id);
-            console.log('Données reçues:', response);
-            setData(response.data); // Mise à jour de l'état avec les données récupérées
-        } catch (err) {
-            console.error('Erreur lors de la récupération des données:', err);
-            setError('Une erreur est survenue lors de la récupération des données.');
+            const response = await TypeHebergementService.getTypeHebergementById(idTYPE);
+            console.log(response);
+            setHebergement(response.data)
+            console.log(hebergement);
+        } catch (error) {
+            console.log(error);
         }
-    };
+    }
 
-useEffect(() => {
-    fetchHebergementById();
-},[]);
+    useEffect(() => {
+        fetchHebergementById()
+    }, []);
 
-  return (
-    <>
-      <div>
-        <h1 className="text-white">Détail de votre hébergement</h1>
-        <div className='d-flex justify-content-center gap-3'>
-        {data.map((item) => (
-            <p>{item.nom}</p>
-    ))}
-        </div>
-      </div>
+
+    return <>
+
+<div>
+        <h1>Détails de l'hébergement</h1>
+        <p><strong>ID :</strong> {hebergement.idTYPE}</p>
+        <p><strong>Nom :</strong> {hebergement.nom}</p>
+        <p><strong>Description :</strong> {hebergement.description}</p>
+        <p><strong>Capacité :</strong> {hebergement.capacite}</p>
+    </div>
+              
     </>
-  );
-};
+}
 
-export default HebergementDetailPage;
+export default DetailHebergementPage;
