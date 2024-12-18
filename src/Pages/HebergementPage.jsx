@@ -8,6 +8,8 @@ const HebergementPage = () => {
     const [data, setData] = useState([]); // État pour stocker les données
     const [error, setError] = useState(null); // État pour gérer les erreurs
 
+    
+
 
     const fetchData = async () => {
         try {
@@ -29,10 +31,10 @@ const HebergementPage = () => {
         <h1 className='d-flex justify-content-center text-white'>Liste des hébergements</h1>
         <div className='multicard'>
         {data.map((item) => (
-        <HebergementCard HebergementCard={item} key={item.id}/>
+        <HebergementCard item={item} key={item.idTYPE}/>
     ))}
         </div>
-    </>;
+    </>
 }
  
 export default HebergementPage;
