@@ -74,19 +74,17 @@ const LoginPage = () => {
  required
  onChange={(e) => setPassword(e.target.value)}        />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
-      </Form.Group>
+     
       <Button variant="success" type="submit">
         Submit
       </Button>
     </Form>
     </Container>
     </div>
-    <Container className="d-flex flex-direction justify-content-center align-items-center">
+  <Container  className="d-flex justify-content-center">
     <div className="lienInscription">
-<p className="pLogin"> si vous n'êtes pas inscrits, merci de cliquer :</p>
-<Link to={"/SignInPage"}><button className="buttonInscription">Inscription</button></Link>
+<p className="pLogin"> si vous n'êtes pas inscrits, merci de cliquer :
+<Link to={"/SignInPage"}><button className="buttonInscription">Inscription</button></Link></p>
     </div>
     </Container>
     
