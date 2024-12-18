@@ -109,28 +109,46 @@ body {
 .formulaire {
   background-color: rgb(11, 190, 100, 0.8);
   width: 40rem;
-  height: 28rem;
+  height: 35rem;
   margin-bottom: 5rem;
   border-radius: 5rem;
 }
 
 .h1formulaire {
   display: flex;
-  align-items: center;
+  padding-left: 4rem;
+ justify-self: center;
   margin-left: 5rem;
 }
 
 .formulaireInscription {
   background-color: rgb(11, 190, 100, 0.8);
-  width: 40rem;
+  width: 35rem;
   height: 42rem;
   margin-bottom: 10rem;
   border-radius: 5rem;
+  padding-top: 1rem;
+
 }
+
+.InputFormInscription{
+  background-color: var(--vertlogo);
+}
+
+.InputGroupInscription{
+  width: 30rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+
+}
+
+
+
+
 
 .buttonEnvoyer {
   display: flex;
-  align-items: center;
+  justify-content: center;
   background-color: rgb(114, 216, 114);
   margin-top: 2rem;
 }
@@ -163,22 +181,41 @@ body {
 .lienInscription {
   display: flex;
   flex-wrap: wrap;
+  background-color: var(--vertlogo);
   align-items: center;
   justify-content: center;
-  background-color: var(--vertlogo);
-  width: 30rem;
-  border-radius: 30%;
+  width: 40rem;
+  border-radius: 20%;
+  height: 2rem;
+  
 }
 
 .buttonInscription {
   display: flex;
-  margin-bottom: 0.85rem;
-  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+ background-color: transparent;
   border: none;
+  width: 5rem;
+ 
+}
+
+.buttonInscription:hover{
+  background-color: var(--verthover);
+}
+
+.InputGroupCP{
+  margin-right: 1rem;
+  width: 30%;
+  
 }
 
 .pLogin {
-  color: black;}
+  color: black;
+display: flex;
+margin-right: 0;
+}
+
 
 
 
@@ -266,4 +303,33 @@ margin-left: 2rem;
 .textHebergement{
   width: 18rem;
   height: 5rem;
+}
+
+.CampingPartieGauche{
+display: flex;
+flex-direction: column;
+
+}
+
+
+.imgCampingPage{
+width: 30rem;
+}
+
+.divPresentation{
+display: flex;
+justify-content: center;
+  
+}
+
+
+.textLorem{
+  background-color: var(--vertlogo);
+  height: 5rem;
+}
+
+.encartLorem{
+  width: 15rem;
+  height: 10 rem;
+  margin-left: 1rem;
 }
