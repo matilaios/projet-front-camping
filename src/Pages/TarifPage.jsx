@@ -9,7 +9,7 @@ const TarifPage = () => {
     return <>
    
      
-    <h1>test TarifPage</h1>
+    <h1 style={{ color: 'white' }}>test TarifPage</h1>
     
    
     </>
