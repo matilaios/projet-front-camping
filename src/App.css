@@ -4,7 +4,7 @@
 }
 
 body {
-  background-image: url("src/Images/imagefond.png");
+  background-image: url("./Images/imagefond.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -70,12 +70,10 @@ body {
   position: sticky;
   margin-top: 1rem;
   padding-inline: 2px;
-  color:black;
+  color: black;
   position: fixed;
-  bottom:0;
+  bottom: 0;
   width: 100%;
- 
-  
 }
 
 .form-group {
@@ -178,32 +176,30 @@ body {
 }
 
 .pLogin {
-  color: black;}
+  color: black;
+}
 
+.card {
+  color: maroon;
+  background-color: darkkhaki;
+}
 
+.list-group-flush {
+  color: maroon;
+  background-color: darkkhaki;
+}
 
-
-  .card{
-    color:maroon;
-    background-color:darkkhaki;
-  }
-
-  .list-group-flush{
-    color:maroon;
-    background-color:darkkhaki;
-  }
-
-  .multicard{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
+.multicard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
 
 .calendar {
   margin-left: 10rem;
-  color:var(--vertlogo);
+  color: var(--vertlogo);
   background: var(--vertlogo);
   display: block;
   align-items: center;
@@ -212,39 +208,36 @@ body {
 .reservationDroite {
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: center;
   padding: rem;
-  text-align: center; 
+  text-align: center;
 }
 
-.h1Planning{
+.h1Planning {
   display: flex;
   margin-left: 10rem;
-  justify-content: center; 
+  justify-content: center;
   color: var(--vertlogo);
-  
 }
 
-.h1Reservation{
+.h1Reservation {
   display: flex;
   justify-content: center;
   color: var(--vertlogo);
-
 }
 
-
-.inputGroup{
-width: 20rem;
-margin-bottom: 1rem;
-margin-left: 2rem;
+.inputGroup {
+  width: 20rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
 }
 
-.formControlResa{
-  background-color:var(--vertlogo);
+.formControlResa {
+  background-color: var(--vertlogo);
   width: 8rem;
 }
 
-.boutonReserver{
+.boutonReserver {
   display: flex;
   justify-content: center;
   margin-left: 2rem;

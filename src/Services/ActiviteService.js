@@ -16,6 +16,9 @@ function getActiviteById(idActivite){
     return axios.get('http://127.0.0.1:3000/campingpong/readActiviteById/'+idActivite);
 }
 
+function updateActivite(idActivite, updateActivite) {
+    return axios.post('http://127.0.0.1:3000/campingpong/updateActiviteById/'+ idActivite, updateActivite);
+}
 
 
-export default { getAllTypeActivites, getAllActivitesByIdType, getActiviteById};
+export default { getAllTypeActivites, getAllActivitesByIdType, getActiviteById, updateActivite};
