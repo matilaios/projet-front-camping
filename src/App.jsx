@@ -17,6 +17,7 @@ import SignInPage from './Pages/SignInPage';
 import HebergementDetailPage from './Pages/DetailHebergementPage';
 import { useNavigate } from 'react-router-dom';
 import AuthService from './Services/AuthService';
+import EditPage from './Pages/EditActivitePage';
 
 function App() {
   
@@ -44,6 +45,10 @@ function App() {
 <Route path='/LoginPage' element={<LoginPage/>}/>
 <Route path='/SignInPage' element={<SignInPage/>}/>
 <Route path='/DetailPage' element={<HebergementDetailPage/>}/>
+<Route path='/EditActivitePage/:idActivite' element={<EditPage></EditPage>}></Route>
+
+
+
     </Routes>
 
     

@@ -1,116 +1,102 @@
-
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import ActiviteService from '../Services/ActiviteService';
 import Accordion from 'react-bootstrap/Accordion';
-import { Container, ListGroup } from 'react-bootstrap';
-import { useNavigate, useParams } from 'react-router-dom';
-
+import { Button, Container, ListGroup } from 'react-bootstrap';
+import AuthContext from '../Context/AuthContext';
+import AuthService from '../Services/AuthService';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const ActivitePage = () => {
-    const[activites, setactivites] = useState([]);
-    const[typeActivites, setTypeActivites] = useState([]);
-    const [activiteByType, setActiviteByType] = useState();
+    const user = AuthService.getUser(); 
+    const navigate = useNavigate();
+    // const {isAuthentificated, user} = useContext(AuthContext);
+    console.log(user);
+    
 
+    const [typeActivites, setTypeActivites] = useState([]); // Liste des types d'activités
+    const [activitesByType, setActivitesByType] = useState({}); // Stocker les activités par idType
 
-
-    const fecthAllTypeActivites = async ()=>{
+    // Récupérer tous les types d'activités
+    const fetchAllTypeActivites = async () => {
         try {
             const response = await ActiviteService.getAllTypeActivites();
             setTypeActivites(response.data);
         } catch (error) {
             console.log(error);
         }
-    }
+    };
 
+    // Récupérer les activités pour un idType spécifique
+    const fetchActivitesByType = async (idType) => {
+        console.log("j'entre dans la fonciton par activite apr type");
 
-
-
-    const fetchAllActivites = async ()=>{
         try {
-            const response = await ActiviteService.getAllActivites();
-            // console.log(response.data[0].idType);
-            setactivites(response.data);
-            
+            // Si les données sont déjà chargées, on ne refait pas l'appel API
+            if (activitesByType[idType]) return;
+
+            const response = await ActiviteService.getAllActivitesByIdType(idType);
+            console.log("le type de l'activité est : " +response.data[0].idType);
+    
+            // Ajouter les activités dans l'objet activitesByType
+            setActivitesByType((prevState) => ({
+                ...prevState,[idType]: response.data
+            }));
+
         } catch (error) {
             console.log(error);
         }
-    }
+    };
 
+    useEffect(() => {
+        fetchAllTypeActivites();
+    }, []);
 
-        const fetchAllActivitesByIdType = async (idType)=>{
-            try {
-                const response = await ActiviteService.getAllActivitesByIdType(idType);
-                console.log("j'entre dans la fonciton par activite apr type");
-                console.log("le type de l'activité est : " +response.data[0].idType);
-                console.log(response.data);
-                setActiviteByType(response.data);
-                
-            } catch (error) {
-                console.log(error);
-                
-            }
-        }
-       
-
-useEffect(()=>{
-    fecthAllTypeActivites()
-}, []);
+    function handleEdit(idActivite) {
+       navigate("/EditactivitePage/" + idActivite);
+      }
     
-
-
-useEffect(()=>{
-    fetchAllActivites()
-}, []);
-
-
 
     return <>
-    <h1  style={{ color: 'white'}}>liste des types d'activité</h1>
+    <Container>
 
 
-    {typeActivites && typeActivites.map((typeActivites)=>{
+            <h1 style={{ color: 'white' }}>Liste des types d'activité</h1>
 
-        return<>
- {/* <div style={{ color: 'white'}} key={typeActivites.idType} onClick={()=>fetchAllActivitesByIdType(typeActivites.idType)}> */}
-
-{/* {activiteByType && activiteByType.map((activiteByType)=>{
-    return<>
-   {activiteByType.nom}
-    </>
-})} */}
-
-<Accordion defaultActiveKey="0">
-      <Accordion.Item key={typeActivites.idType}>
-        <Accordion.Header  onClick={()=>fetchAllActivitesByIdType(typeActivites.idType)} >{typeActivites.nomType} je suis ici</Accordion.Header>
-        <Accordion.Body>
-        <ListGroup>
-            {activiteByType && activiteByType.map((activiteByType)=>{
-    return<ListGroup.Item key={activiteByType.idActivite}>{activiteByType.nomActivite}</ListGroup.Item>
-
-})}
-
-      
-    </ListGroup>
-
-
-        </Accordion.Body>
-      </Accordion.Item>
-    </Accordion>
-
-
-
-
-{/* </div> */}
-
-
+            <Accordion defaultActiveKey="0">
+                {typeActivites.map((type) => (
+                    <Accordion.Item key={type.idType} eventKey={type.idType}>
+                        <Accordion.Header onClick={() => fetchActivitesByType(type.idType)}>
+                            {type.nomType}
+                        </Accordion.Header>
+                        <Accordion.Body>
+                            <ListGroup>
+                                
+                                {activitesByType[type.idType] ? (
+                                    activitesByType[type.idType].map((activite) => (
+                                        <ListGroup.Item key={activite.idActivite}>
+                                            <section>{activite.nomActivite}</section>
+                                            <section>{activite.description+" / "+" "+activite.prix + "  € "+activite.typePrix}</section>
+                                            {user.role===1 ? (
+                                            <>
+                                            <Button variant="primary" onClick={() => handleEdit(activite.idActivite)}> modifier</Button>
+                                            <Button variant="danger">supprimer</Button>
+                                            </>
+                                            ):(<></>)}
+                                        </ListGroup.Item>
+                                    ))
+                                ) : (
+                                    <p style={{ color: 'gray' }}>Chargement...</p>
+                                )}
+                            </ListGroup>
+                        </Accordion.Body>
+                    </Accordion.Item>
+                ))}
+            </Accordion>
+            </Container>
         </>
-    })}
-
-
-
     
-    </>;
-}
- 
+};
+
+
 export default ActivitePage;
