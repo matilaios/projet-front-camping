@@ -19,7 +19,9 @@ function getUser() {
   const token = localStorage.getItem("token");
   if (token && isValid()) {
     const decodedToken = jwtDecode(token);
-    return { mail: decodedToken.mail };
+    return {
+       email: decodedToken.email,
+      role : decodedToken.role };
   } else {
     return {};
   }
