@@ -20,6 +20,7 @@ import AuthService from "./Services/AuthService";
 import EditActivitePage from "./Pages/EditActivitePage";
 import logo from "./Images/logocampingpong.webp";
 import DetailHebergementPage from './Pages/DetailHebergementPage';
+import EditTarifPage from "./Pages/EditTarifPage";
 
 function App() {
   return (
@@ -45,6 +46,8 @@ function App() {
 {/* <Route path="/DetailPage" element={<HebergementDetailPage />} /> */}
 
 <Route path='/EditActivitePage/:idActivite' element={<EditActivitePage/>}></Route>
+<Route path='/EditTarifPage/:idTarif' element={<EditTarifPage/>}></Route>
+
   </Routes>
 
         <MyFooter />

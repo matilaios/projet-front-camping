@@ -68,7 +68,6 @@ const EditActivitePage = () => {
         },[idActivite]);
     
     return <>
-    <h1 style={{ color: 'white' }}>Modification de l'activité {activite.nom.toUpperCase()}</h1>
 
 <Container>
 <Form className="col-10 mb-3" onSubmit={handleSubmit}>
