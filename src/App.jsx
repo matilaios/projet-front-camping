@@ -20,6 +20,7 @@ import AuthService from "./Services/AuthService";
 import EditActivitePage from "./Pages/EditActivitePage";
 import logo from "./Images/logocampingpong.webp";
 import DetailHebergementPage from './Pages/DetailHebergementPage';
+import EditTarifPage from "./Pages/EditTarifPage";
 
 function App() {
   return (
@@ -42,9 +43,11 @@ function App() {
 <Route path='/LoginPage' element={<LoginPage/>}/>
 <Route path='/SignInPage' element={<SignInPage/>}/>
 <Route path='/HebergementPage/:idTYPE' element={<DetailHebergementPage/>}/>
-<Route path="/DetailPage" element={<HebergementDetailPage />} />
+{/* <Route path="/DetailPage" element={<HebergementDetailPage />} /> */}
 
-<Route path='/EditActivitePage/:idActivite' element={<EditPage></EditPage>}></Route>
+<Route path='/EditActivitePage/:idActivite' element={<EditActivitePage/>}></Route>
+<Route path='/EditTarifPage/:idTarif' element={<EditTarifPage/>}></Route>
+
   </Routes>
 
         <MyFooter />
