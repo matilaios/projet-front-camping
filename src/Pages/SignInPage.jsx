@@ -5,6 +5,7 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 import UserService from "../Services/UserService";
 import { useNavigate } from 'react-router-dom';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 
 
@@ -16,6 +17,7 @@ const SignInPage = () => {
 
     const [user, setUser]=useState({});
     const navigate = useNavigate();
+    const [capValue, setCapValue]=useState()
     const handleChange=(e)=>{
       console.log(e.target.value);
       console.log(e.target.name);
@@ -171,8 +173,15 @@ const SignInPage = () => {
         />
 </InputGroup>
 
-
+<div>
+    
+    <ReCAPTCHA className='recaptcha'
+    sitekey='6Lf8caAqAAAAABsvHyguJMBcWN4cGN5tf0nmjOCN'
+    onChange={(value)=> setCapValue(value)}
+    />
+  </div>
  <Form.Control  className="buttonInscription"
+ disabled={!capValue}
   type="submit" 
   value="Inscription" 
  
