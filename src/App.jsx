@@ -44,7 +44,7 @@ function App() {
 <Route path='/HebergementPage/:idTYPE' element={<DetailHebergementPage/>}/>
 <Route path="/DetailPage" element={<HebergementDetailPage />} />
 
-<Route path='/EditActivitePage/:idActivite' element={<EditPage></EditPage>}></Route>
+<Route path='/EditActivitePage/:idActivite' element={<EditActivitePage/>}></Route>
   </Routes>
 
         <MyFooter />

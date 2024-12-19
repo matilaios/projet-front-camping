@@ -2,16 +2,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from '../Components/NavBar';
 import { Button, Container, InputGroup } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
-import MyFooter from '../Components/Footer';
-
-
 
 
 const ContactPage = () => {
+
+
+  
     return <>
    
-    
-
     <Container className="formulaire">
     <h1 className='h1formulaire'>FORMULAIRE DE CONTACT</h1>
 
