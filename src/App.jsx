@@ -42,9 +42,9 @@ function App() {
 <Route path='/LoginPage' element={<LoginPage/>}/>
 <Route path='/SignInPage' element={<SignInPage/>}/>
 <Route path='/HebergementPage/:idTYPE' element={<DetailHebergementPage/>}/>
-<Route path="/DetailPage" element={<HebergementDetailPage />} />
+{/* <Route path="/DetailPage" element={<HebergementDetailPage />} /> */}
 
-<Route path='/EditActivitePage/:idActivite' element={<EditPage></EditPage>}></Route>
+<Route path='/EditActivitePage/:idActivite' element={<EditActivitePage/>}></Route>
   </Routes>
 
         <MyFooter />
