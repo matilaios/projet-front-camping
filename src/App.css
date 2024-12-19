@@ -67,13 +67,11 @@ body {
   width: 100%;
   flex-direction: row;
   justify-content: center;
-  position: sticky;
+  position:absolute;
   margin-top: 1rem;
   padding-inline: 2px;
   color:black;
-  position:sticky;
   bottom:0;
-  width: 100%;
 }
 
 .form-group {
@@ -107,7 +105,7 @@ body {
 .formulaire {
   background-color: rgb(11, 190, 100, 0.8);
   width: 40rem;
-  height: 35rem;
+  height: 37rem;
   margin-bottom: 5rem;
   border-radius: 5rem;
 }
@@ -122,7 +120,7 @@ body {
 .formulaireInscription {
   background-color: rgb(11, 190, 100, 0.8);
   width: 35rem;
-  height: 42rem;
+  height: 47rem;
   margin-bottom: 10rem;
   border-radius: 5rem;
   padding-top: 1rem;
@@ -137,11 +135,7 @@ body {
   width: 30rem;
   margin-bottom: 1rem;
   margin-left: 2rem;
-
 }
-
-
-
 
 
 .buttonEnvoyer {
@@ -192,9 +186,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
- background-color: transparent;
+  background-color: var(--vertlogo);
   border: none;
-  width: 5rem;
+  width: 6rem;
+  margin-left: 13rem;
  
 }
 
@@ -205,7 +200,6 @@ body {
 .InputGroupCP{
   margin-right: 1rem;
   width: 30%;
-  
 }
 
 .pLogin {
@@ -284,7 +278,6 @@ margin-right: 0;
 .cardHebergement{
   background-color: wheat;  
   width: 18rem;
-
 }
 
 .cardHebergement img{
@@ -300,9 +293,7 @@ margin-right: 0;
 .CampingPartieGauche{
 display: flex;
 flex-direction: column;
-
 }
-
 
 .imgCampingPage{
 width: 30rem;
@@ -311,9 +302,7 @@ width: 30rem;
 .divPresentation{
 display: flex;
 justify-content: center;
-  
 }
-
 
 .textLorem{
   background-color: var(--vertlogo);
@@ -324,4 +313,114 @@ justify-content: center;
   width: 15rem;
   height: 10 rem;
   margin-left: 1rem;
+}
+
+.bodyDetail{
+  display: flex;
+  align-items: center;
+  color: whitesmoke;
+  gap : 4vw;
+  justify-content: space-evenly;
+
+}
+
+.detailLeftPart h2{
+  margin-left: 5vw
+}
+
+.detailLeftPart img{
+  width: 30rem;
+  height: 20rem;
+  border-radius: 30px;
+  margin-left: 4vw;
+  border: 3px solid whitesmoke;
+}
+
+.detailRightPart{
+  border: 3px solid whitesmoke;
+  padding: 2rem;
+  border-radius: 30px;
+  background-color: var(--vertlogo);
+  width: 30rem;
+  height: 20rem;
+  ;
+}
+
+.buttonDetailBack{
+  /* display: flex; */
+  margin-left: 3vw;
+}
+
+
+.divCard{
+
+display: flex;
+justify-content: center;
+width: 30rem;
+height: 30rem;
+align-items: center;
+margin-inline:5px 10px;
+
+}
+
+
+
+
+
+
+.cardPiscine{
+
+height: 19.5rem;
+width: 10rem;
+
+}
+
+.cardBodyCamping{
+  background-color: var(--vertlogo);
+
+}
+
+.cardImage{
+  height: 19rem;
+  
+}
+
+.cardCamping:hover{
+  background-color: black;
+  width: 30rem;
+}
+
+.recaptcha{
+  display: flex;
+  justify-content: center;
+  margin-left: 2rem;
+  
+}
+
+
+.InputFormContact{
+  display: flex;
+  justify-content: center;
+width: 6rem;
+margin-left: 6rem;
+
+}
+
+.InputFormContactMessage{
+  display: flex;
+  justify-content: center;
+  width: 6rem;
+  height: 8rem ;
+  margin-left: 6rem;
+}
+
+
+.FormControlContactMessage{
+  height: 8rem;
+  width: 20rem;
+}
+
+.FormControlContact{
+  
+  width: 20rem;
 }
