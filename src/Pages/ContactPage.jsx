@@ -17,8 +17,6 @@ const [capValue, setCapValue]=useState()
 
     return <>
    
-    
-
     <Container className="formulaire">
     <h1 className='h1formulaire'>FORMULAIRE DE CONTACT</h1>
 

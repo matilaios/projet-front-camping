@@ -67,13 +67,11 @@ body {
   width: 100%;
   flex-direction: row;
   justify-content: center;
-  position: sticky;
+  position:absolute;
   margin-top: 1rem;
   padding-inline: 2px;
   color:black;
-  position:sticky;
   bottom:0;
-  width: 100%;
 }
 
 .form-group {
@@ -137,11 +135,7 @@ body {
   width: 30rem;
   margin-bottom: 1rem;
   margin-left: 2rem;
-
 }
-
-
-
 
 
 .buttonEnvoyer {
@@ -206,7 +200,6 @@ body {
 .InputGroupCP{
   margin-right: 1rem;
   width: 30%;
-  
 }
 
 .pLogin {
@@ -285,7 +278,6 @@ margin-right: 0;
 .cardHebergement{
   background-color: wheat;  
   width: 18rem;
-
 }
 
 .cardHebergement img{
@@ -301,9 +293,7 @@ margin-right: 0;
 .CampingPartieGauche{
 display: flex;
 flex-direction: column;
-
 }
-
 
 .imgCampingPage{
 width: 30rem;
@@ -312,9 +302,7 @@ width: 30rem;
 .divPresentation{
 display: flex;
 justify-content: center;
-  
 }
-
 
 .textLorem{
   background-color: var(--vertlogo);
@@ -325,6 +313,42 @@ justify-content: center;
   width: 15rem;
   height: 10 rem;
   margin-left: 1rem;
+}
+
+.bodyDetail{
+  display: flex;
+  align-items: center;
+  color: whitesmoke;
+  gap : 4vw;
+  justify-content: space-evenly;
+
+}
+
+.detailLeftPart h2{
+  margin-left: 5vw
+}
+
+.detailLeftPart img{
+  width: 30rem;
+  height: 20rem;
+  border-radius: 30px;
+  margin-left: 4vw;
+  border: 3px solid whitesmoke;
+}
+
+.detailRightPart{
+  border: 3px solid whitesmoke;
+  padding: 2rem;
+  border-radius: 30px;
+  background-color: var(--vertlogo);
+  width: 30rem;
+  height: 20rem;
+  ;
+}
+
+.buttonDetailBack{
+  /* display: flex; */
+  margin-left: 3vw;
 }
 
 
