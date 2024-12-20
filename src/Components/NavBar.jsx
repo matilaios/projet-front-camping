@@ -16,17 +16,20 @@ function NavBar() {
         
           
           <Nav >
-            <Nav.Link className="navBarHover">
-              <Link to={"/CampingPage"}>CampingPage</Link>
+          <Nav.Link className="navBarHover">
+              <Link to={"/"}>Accueil</Link>
             </Nav.Link>
             <Nav.Link className="navBarHover">
-              <Link to={"/HebergementPage"}>HébergementPage</Link>
+              <Link to={"/CampingPage"}>Le Camping</Link>
+            </Nav.Link>
+            <Nav.Link className="navBarHover">
+              <Link to={"/HebergementPage"}>Les Hebergements</Link>
             </Nav.Link>
             <Nav.Link className="navBarHover">
               <Link to={"/ActivitePage"}>Nos activités</Link>
             </Nav.Link>
             <Nav.Link className="navBarHover">
-              <Link to={"/TarifPage"}>TarifPage</Link>
+              <Link to={"/TarifPage"}>Nos tarifs</Link>
             </Nav.Link>
             <Nav.Link className="navBarHover">
               <Link to={"/ResaPage"}>Réservation</Link>
@@ -34,9 +37,7 @@ function NavBar() {
             <Nav.Link className="navBarHover">
               <Link to={"/ContactPage"}>Contact</Link>
             </Nav.Link>
-            <Nav.Link className="navBarHover">
-              <Link to={"/"}>Accueil</Link>
-            </Nav.Link>
+            
      
 {/* bouton de la navbar qui change selon qu'on est connecté ou pas */}
 {/* ok le 13/12/24 */}
