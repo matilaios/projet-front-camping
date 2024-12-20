@@ -23,7 +23,9 @@ import EditActivitePage from "./Pages/EditActivitePage";
 import logo from "./Images/logocampingpong.webp";
 import DetailHebergementPage from './Pages/DetailHebergementPage';
 import EditTarifPage from "./Pages/EditTarifPage";
-import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+
 
 function App() {
   return (
@@ -36,6 +38,7 @@ function App() {
 
 <NavBar/>
     <Routes>
+<Route path='/' element={<HomePage/>} />
 <Route path='/' element={<HomePage/>} />
 <Route path='/CampingPage' element={<CampingPage/>}/>
 <Route path='/HebergementPage' element={<HebergementPage/>}/>
@@ -66,6 +69,20 @@ theme="colored"
 />
 
         <MyFooter />
+
+
+        <ToastContainer
+position="bottom-center"
+autoClose={2000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="colored"
+/>
       </BrowserRouter>
     </>
   );

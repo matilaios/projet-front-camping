@@ -38,6 +38,7 @@ function NavBar() {
               <Link to={"/ContactPage"}>Contact</Link>
             </Nav.Link>
             
+           
      
 {/* bouton de la navbar qui change selon qu'on est connecté ou pas */}
 {/* ok le 13/12/24 */}

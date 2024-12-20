@@ -189,7 +189,7 @@ body {
   background-color: var(--vertlogo);
   border: none;
   width: 6rem;
-  margin-left: 13rem;
+ 
  
 }
 
@@ -453,3 +453,21 @@ margin-left: 6rem;
   display: flex;
   gap:1vw
 }
+
+
+.formLogin{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+width: 25rem;
+
+}
+
+
+.buttonSubmitLogin{
+display: flex;
+justify-content: center;
+margin-bottom: 1rem;
+margin-left: 10rem;
+}
+
