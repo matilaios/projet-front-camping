@@ -1,5 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import 'react-toastify/dist/ReactToastify.css';
+
 import "./App.css";
 import { BrowserRouter, Link, Navigate, Route, Routes } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
@@ -21,6 +23,7 @@ import EditActivitePage from "./Pages/EditActivitePage";
 import logo from "./Images/logocampingpong.webp";
 import DetailHebergementPage from './Pages/DetailHebergementPage';
 import EditTarifPage from "./Pages/EditTarifPage";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -33,7 +36,7 @@ function App() {
 
 <NavBar/>
     <Routes>
-<Route path='/HomePage' element={<HomePage/>} />
+<Route path='/' element={<HomePage/>} />
 <Route path='/CampingPage' element={<CampingPage/>}/>
 <Route path='/HebergementPage' element={<HebergementPage/>}/>
 <Route path='/ActivitePage' element={<ActivitePage/>}/>
@@ -49,6 +52,18 @@ function App() {
 <Route path='/EditTarifPage/:idTarif' element={<EditTarifPage/>}></Route>
 
   </Routes>
+  <ToastContainer
+position="bottom-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="colored"
+/>
 
         <MyFooter />
       </BrowserRouter>

@@ -5,6 +5,8 @@ import Accordion from 'react-bootstrap/Accordion';
 import { Button, Container, ListGroup } from 'react-bootstrap';
 import AuthContext from '../Context/AuthContext';
 import AuthService from '../Services/AuthService';
+import { toast } from "react-toastify";
+
 import { Navigate, useNavigate } from 'react-router-dom';
 
 const ActivitePage = () => {
@@ -48,13 +50,37 @@ const ActivitePage = () => {
         }
     };
 
+
+    const deleteActivite = async (idActivite)=>{
+        console.log(idActivite);
+        try {
+            const response = await ActiviteService.deleteActiviteById(idActivite);
+            console.log(response);
+            toast.success("Élément supprimé avec succès !", {
+                position: "bottom-center",
+                autoClose: 2000, // Temps avant fermeture (en ms)
+                onClose: () => window.location.reload(), // Recharger après la fermeture
+              });
+
+            
+        } catch (error) {
+            console.log(error);
+            toast.error("Erreur lors de la suppression de l'activité");
+            
+
+        }
+        
+    }
+
+
     useEffect(() => {
         fetchAllTypeActivites();
     }, []);
 
     function handleEdit(idActivite) {
-       navigate("/EditactivitePage/" + idActivite);
+       navigate("/EditActivitePage/" + idActivite);
       }
+      
     
 
     return <>
@@ -62,6 +88,8 @@ const ActivitePage = () => {
 
 
             <h1 style={{ color: 'white' }}>Liste des types d'activité</h1>
+            <Button className="boutonAjoutActivite" size="lg" onClick={()=>handleEdit(activite.idActivite)}>AJOUTER UNE ACTIVITE</Button>
+
 
             <Accordion defaultActiveKey="0">
                 {typeActivites.map((type) => (
@@ -76,13 +104,15 @@ const ActivitePage = () => {
                                     activitesByType[type.idType].map((activite) => (
                                         <ListGroup.Item key={activite.idActivite}>
                                             <section>{activite.nomActivite}</section>
-                                            <section>{activite.description+" / "+" "+activite.prix + "  € "+activite.typePrix}</section>
+                                            <section>{activite.description+" / "+" "+activite.prix + "  € "+activite.typePrix}
                                             {user.role===1 ? (
                                             <>
                                             <Button variant="primary" onClick={() => handleEdit(activite.idActivite)}> modifier</Button>
-                                            <Button variant="danger">supprimer</Button>
+                                            <Button variant="danger" onClick={()=>deleteActivite(activite.idActivite)}>supprimer</Button>
                                             </>
                                             ):(<></>)}
+                                            </section>
+
                                         </ListGroup.Item>
                                     ))
                                 ) : (

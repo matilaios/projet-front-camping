@@ -43,8 +43,6 @@ useEffect(()=>{
 
 function handleEdit(idTarif) {
   console.log("je clique sur le bouton de l'id"+idTarif);
-  
-  
   navigate("/EditTarifPage/" + idTarif);
  }
 
@@ -52,17 +50,6 @@ function handleEdit(idTarif) {
     return <Container>
    
      
-    {/* <h1 style={{ color: 'white' }}>test TarifPage</h1> */}
-    {/* {tarifs && tarifs.map((tarif)=>{
-        return<>
-        <p style={{ color: 'white' }}>
-             {tarif.nomType}
-        {tarif.capacite}
-        {tarif.nom}
-        {tarif.prix}
-        </p>
-                   {tarifs && tarifs.map((tarif)=>{
-        return <> */}
 
         <Table striped bordered hover>
             
@@ -112,31 +99,10 @@ function handleEdit(idTarif) {
         </>
    })};
 
-        {/* <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td colSpan={2}>Larry the Bird</td>
-          <td>@twitter</td>
-        </tr> */}
    
       </tbody>
     
     </Table>
-  
-  
-
-
-
-
-
-
-
-
  
    
     </Container>
