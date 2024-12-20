@@ -4,10 +4,13 @@ import AuthContext from "../Context/AuthContext";
 import UserService from "../Services/UserService";
 import AuthService from "../Services/AuthService";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+
+
 
 // import LogoutButton from "../Components/LogoutButton.jsx";
 
-import MyFooter from "../Components/Footer";
+
 
 const LoginPage = () => {
   //  const [user, setUser] = useState({});
@@ -36,24 +39,26 @@ const LoginPage = () => {
       AuthService.setAxiosToken();
       setIsAuthenticated(true);
       localStorage.setItem("token", response.data.token);
-      alert("connexion réussie");
-    
-      navigate("/HomePage");
+      // alert("connexion réussie");
+      toast.success('connextion réussie')
+      navigate("/");
     } catch (error) {
       console.log(error);
-      alert("erreur lors de la connexion");
+      // alert("erreur lors de la connexion");
+      toast.error("erreur lors de l'inscription")
       // navigate('/loginpage');
     }
   };
 
   return <>
-      <div className="headerLoginPage"></div>
-      <div className="d-flex flex-column align-item-center">
-        <Container>
+      <div className="headerLoginPage">
+      <div className="d-flex flex-column justify-content-center align-item-center">
+        <Container className="d-flex justify-content-center">
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               < Form.Label>Email address</Form.Label>
               <Form.Control
+              className="formLogin"
                 type="email"
                 placeholder="Enter email"
                 name="mail"
@@ -68,6 +73,7 @@ const LoginPage = () => {
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Password</Form.Label>
         <Form.Control 
+        className="formLogin"
  type="password"
  placeholder="Password"
  name="password"
@@ -75,17 +81,19 @@ const LoginPage = () => {
  onChange={(e) => setPassword(e.target.value)}        />
       </Form.Group>
      
-      <Button variant="success" type="submit">
+      <Button className="buttonSubmitLogin" variant="success" type="submit">
         Submit
       </Button>
     </Form>
     </Container>
+    </div>
     </div>
   <Container  className="d-flex justify-content-center">
     <div className="lienInscription">
 <p className="pLogin"> si vous n'êtes pas inscrits, merci de cliquer :
 <Link to={"/SignInPage"}><button className="buttonInscription">Inscription</button></Link></p>
     </div>
+   
     </Container>
     
     </>

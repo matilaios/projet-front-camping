@@ -35,13 +35,13 @@ function NavBar() {
               <Link to={"/ContactPage"}>Contact</Link>
             </Nav.Link>
             <Nav.Link className="navBarHover">
-              <Link to={"/HomePage"}>Accueil</Link>
+              <Link to={"/"}>Accueil</Link>
             </Nav.Link>
      
 {/* bouton de la navbar qui change selon qu'on est connecté ou pas */}
 {/* ok le 13/12/24 */}
   <Nav.Link className="navBarHover">
-    {isUserValid ? (<Button variant="danger" onClick={()=>{AuthService.logout(); navigate('/HomePage')}}>Se déconnecter</Button>) 
+  {isUserValid ? (<Button variant="danger" onClick={()=>{AuthService.logout(); navigate('/')}}>Se déconnecter</Button>) 
     : (
       <Link to={"/LoginPage"}>Se connecter / s'inscrire</Link>
     )}

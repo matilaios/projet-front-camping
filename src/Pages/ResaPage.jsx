@@ -1,10 +1,11 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import Calendar from "react-calendar/dist/cjs/Calendar.js";
+
 import Form from "react-bootstrap/Form";
 import { InputGroup } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import ReservationService from "../Services/ReservationService";
+import MyCalendar from "../Components/Calendar";
 
 const ResaPage = () => {
   const [reservation, setReservation] = useState({});
@@ -26,12 +27,12 @@ const ResaPage = () => {
     }
 };
 
-  return 
-    <>
+  return <>
+
       <div className="d-flex justify-content-center">
         <div className="d-block justify-content-center">
           <h1 className="h1Planning">Planning </h1>
-          <Calendar className="calendar"></Calendar>
+          <MyCalendar className="calendar"></MyCalendar>
         </div>
 
         <div className="reservationDroite">
