@@ -67,7 +67,7 @@ body {
   width: 100%;
   flex-direction: row;
   justify-content: center;
-  position:absolute;
+  position:sticky;
   margin-top: 1rem;
   padding-inline: 2px;
   color:black;
@@ -423,6 +423,35 @@ margin-left: 6rem;
 .FormControlContact{
   
   width: 20rem;
+
+  
+}
+
+.boutonAjoutActivite{
+  background-color : var(--vertlogo);
+  border: var(--vertlogo);
+}
+
+.activiteButton{
+  display: flex;
+  gap : 1vw;
+  justify-content: space-between;
+}
+
+.lesbutton{
+  display: flex;
+  gap:1vw
+}
+
+.activiteButton{
+  display: flex;
+  gap : 1vw;
+  justify-content: space-between;
+}
+
+.lesbutton{
+  display: flex;
+  gap:1vw
 }
 
 

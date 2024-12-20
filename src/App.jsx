@@ -1,5 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import 'react-toastify/dist/ReactToastify.css';
+
 import "./App.css";
 import { BrowserRouter, Link, Navigate, Route, Routes } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
@@ -37,6 +39,7 @@ function App() {
 <NavBar/>
     <Routes>
 <Route path='/' element={<HomePage/>} />
+<Route path='/' element={<HomePage/>} />
 <Route path='/CampingPage' element={<CampingPage/>}/>
 <Route path='/HebergementPage' element={<HebergementPage/>}/>
 <Route path='/ActivitePage' element={<ActivitePage/>}/>
@@ -52,6 +55,18 @@ function App() {
 <Route path='/EditTarifPage/:idTarif' element={<EditTarifPage/>}></Route>
 
   </Routes>
+  <ToastContainer
+position="bottom-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="colored"
+/>
 
         <MyFooter />
 

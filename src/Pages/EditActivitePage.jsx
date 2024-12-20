@@ -114,16 +114,6 @@ const EditActivitePage = () => {
         </InputGroup.Text>
       </InputGroup>
 
-      {/* <InputGroup className="mb-3">
-        <InputGroup.Text id="basic-addon1">Type de l'activié</InputGroup.Text>
-        <Form.Control
-          defaultValue={activite.nomType}
-          aria-label="Type d'activité"
-          aria-describedby="basic-addon1"
-          onChange={handleChange}
-          name="activite.nomType"
-        />
-      </InputGroup> */}
 
 
       <Form.Select aria-label="Default select example" onChange={handleChange} name="idType" value={activite.idType}>
