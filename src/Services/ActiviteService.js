@@ -20,5 +20,20 @@ function updateActivite(idActivite, updateActivite) {
     return axios.post('http://127.0.0.1:3000/campingpong/updateActiviteById/'+ idActivite, updateActivite);
 }
 
+function deleteActiviteById(idActivite){
+    return axios.delete('http://127.0.0.1:3000/campingpong/deleteActiviteById/'+ idActivite);
+}
 
-export default { getAllTypeActivites, getAllActivitesByIdType, getActiviteById, updateActivite};
+function addActivite(){
+    return axios.post('http://127.0.0.1:3000/campingpong/createActivite');
+}
+
+
+export default { 
+    getAllTypeActivites,
+    getAllActivitesByIdType,
+    getActiviteById,
+    updateActivite, 
+    deleteActiviteById,
+    addActivite
+};

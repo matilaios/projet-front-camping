@@ -42,7 +42,7 @@ function NavBar() {
 {/* bouton de la navbar qui change selon qu'on est connecté ou pas */}
 {/* ok le 13/12/24 */}
   <Nav.Link className="navBarHover">
-  {isUserValid ? (<Button variant="danger" onClick={()=>{AuthService.logout(); navigate('/')}}>Se déconnecter</Button>) 
+    {isUserValid ? (<Button variant="danger" onClick={()=>{AuthService.logout(); navigate('/')}}>Se déconnecter</Button>) 
     : (
       <Link to={"/LoginPage"}>Se connecter / s'inscrire</Link>
     )}

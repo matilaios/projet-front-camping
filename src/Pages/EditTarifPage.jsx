@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import AuthService from "../Services/AuthService";
 import { useEffect, useState } from "react";
 import TarifServices from "../Services/TarifServices";
@@ -6,22 +6,23 @@ import { Button, Container, Form, InputGroup, ListGroup } from "react-bootstrap"
 
 const EditTarifPage = () => {
     const user = AuthService.getUser(); 
+
     // console.log(user);
 
     const {idTarif}=useParams();
-    // console.log(idTarif);
-    const [updateTarif, setUpdatetarif] = useState({});
-    // console.log("page pour modifier les tarifs");
+    console.log(idTarif);
+    const [updateTarif, setUpdateTarif] = useState({});
+    console.log("page pour modifier les tarifs");
 
     const fetchDetailTarifById = async () =>{
         try {
-            // console.log("j'entre dans mon fetch");
+            console.log("j'entre dans mon fetch");
             
             const response = await TarifServices.getTarifById(idTarif);
-        //    console.log("j affiche mes reponses");
+           console.log("j affiche mes reponses");
            console.log(response.data);
            
-           setUpdatetarif(response.data[0]);
+           setUpdateTarif(response.data[0]);
             
         } catch (error) {
             console.log(error);
@@ -32,18 +33,17 @@ const EditTarifPage = () => {
 
  const handlechange = (event)=>{
     console.log(event.target.value);
-    setUpdatetarif({...updateTarif, [event.target.name] : event.target.value});
-    // console.log(updateTarif);
+    setUpdateTarif({...updateTarif, [event.target.name] : event.target.value});
     
  }
 
  const handleSubmit = async (e)=>{
+  console.log("Tentative de soumission")
     e.preventDefault();
     try {
-       
         const response = await TarifServices.updateTarifByID(idTarif, updateTarif)
-        console.log(response);
-        
+        console.log("je suis dans mon try");
+
     } catch (error) {
         console.log(error);
         
@@ -60,23 +60,20 @@ useEffect(()=>{
     <Container>
 
 
-
+    <Form onSubmit={handleSubmit}>
     <InputGroup className="mb-3">
         <Form.Control
-          defaultValue={updateTarif.nom}
           type="text"
           name="nom"
           value={updateTarif.nom}
           onChange={handlechange}
         />
         <Form.Control
-          defaultValue={updateTarif.HEBERGEMENTS}
           type="text"
           name="HEBERGEMENTS"
           value={updateTarif.HEBERGEMENTS}
         />
          <Form.Control
-          defaultValue={updateTarif.prix}
           type="text"
           name="prix"
           value={updateTarif.prix}
@@ -84,18 +81,13 @@ useEffect(()=>{
         />
       <InputGroup.Text id="basic-addon2"> € par nuit</InputGroup.Text>
       <InputGroup.Text  id="basic-addon2">
-      <Form.Control
-      onSubmit={handleSubmit}
-          type="submit"
-          value="Mettre à jour"
-          className="btn-btn-primary"
-        />
        </InputGroup.Text>
-
+       <Button type="submit" variant="primary" >
+          Mettre à jour
+        </Button>
 
 
       </InputGroup>
-
 
  
 
@@ -103,7 +95,7 @@ useEffect(()=>{
 
 
 
-
+</Form>
         </Container>
     </>
 }
