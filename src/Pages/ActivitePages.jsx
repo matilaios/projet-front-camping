@@ -76,13 +76,15 @@ const ActivitePage = () => {
                                     activitesByType[type.idType].map((activite) => (
                                         <ListGroup.Item key={activite.idActivite}>
                                             <section>{activite.nomActivite}</section>
-                                            <section>{activite.description+" / "+" "+activite.prix + "  € "+activite.typePrix}</section>
-                                            {user.role===1 ? (
+                                            <section className='activiteButton'>{activite.description+" / "+" "+activite.prix + "  € "+activite.typePrix} {user.role===1 ? (
                                             <>
-                                            <Button variant="primary" onClick={() => handleEdit(activite.idActivite)}> modifier</Button>
-                                            <Button variant="danger">supprimer</Button>
+                                           <div className='lesbutton'>
+                                            <Button variant="primary" onClick={() => handleEdit(activite.idActivite)}> Modifier</Button>
+                                            <Button variant="danger">Supprimer</Button>
+                                            </div>
                                             </>
-                                            ):(<></>)}
+                                            ):(<></>)}</section>
+                                            
                                         </ListGroup.Item>
                                     ))
                                 ) : (

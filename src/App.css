@@ -424,3 +424,14 @@ margin-left: 6rem;
   
   width: 20rem;
 }
+
+.activiteButton{
+  display: flex;
+  gap : 1vw;
+  justify-content: space-between;
+}
+
+.lesbutton{
+  display: flex;
+  gap:1vw
+}
